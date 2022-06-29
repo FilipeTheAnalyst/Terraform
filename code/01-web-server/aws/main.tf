@@ -18,6 +18,10 @@ resource "aws_instance" "app" {
   availability_zone = "us-east-2a"
   ami               = "ami-0fb653ca2d3203ac1"
 
+  tags = {
+    Name = "web-server"
+  }
+
   user_data = <<-EOF
               #!/bin/bash
               sudo service apache2 start
