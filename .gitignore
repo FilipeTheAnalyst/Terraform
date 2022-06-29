@@ -1,0 +1,4 @@
+code\01-server\gcp\.terraform
+code\01-server\gcp\.terraform.lock.hcl
+code\01-server\gcp\terraform.tfstate
+code\01-server\gcp\terraform.tfstate.backup
