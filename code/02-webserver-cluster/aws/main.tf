@@ -45,6 +45,18 @@ resource "aws_autoscaling_group" "example" {
     }
 }
 
+resource "aws_security_group" "instance" {
+
+  name = var.security_group_name
+
+  ingress {
+    from_port   = var.server_port
+    to_port     = var.server_port
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 data "aws_vpc" "default" {
     default = true
 }
